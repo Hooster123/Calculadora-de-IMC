@@ -38,7 +38,7 @@ document.getElementById('imcForm').addEventListener('submit', function(event) {
 
     // Exibindo o resultado
     let resultadoDiv = document.getElementById('resultado');
-    resultadoDiv.innerHTML = Seu IMC é ${imc.toFixed(2)}. <br>Classificação: ${classificacao};
+    resultadoDiv.innerHTML = `Seu IMC é ${imc.toFixed(2)}. <br>Classificação: ${classificacao}`;
     document.getElementById("dica").innerHTML = dica;
 });
 
@@ -47,12 +47,11 @@ document.getElementById('imcForm').addEventListener('submit', function(event) {
 const botaoRedondo = document.getElementById('botaoRedondo');
 
 botaoRedondo.addEventListener('click', () => {
-    document.body.classList.toggle('dark'); // Alterna a classe "dark" no body
+    document.body.classList.toggle('dark'); 
 
-    // Alterna o ícone do botão
     if (document.body.classList.contains('dark')) {
-        botaoRedondo.textContent = '☀️'; // Ícone de sol para tema claro
+        botaoRedondo.textContent = '☀️'; 
     } else {
-        botaoRedondo.textContent = '🌙'; // Ícone de lua para tema escuro
+        botaoRedondo.textContent = '🌙'; 
     }
 });
